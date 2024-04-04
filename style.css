@@ -1,3 +1,95 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.content-section {
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+.content-section:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slide in from left */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide in from right */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide in from top */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Slide in from bottom */
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-from-left {
+  animation: slideInFromLeft 1s forwards;
+}
+.slide-from-right {
+  animation: slideInFromRight 1s forwards;
+}
+.slide-from-top {
+  animation: slideInFromTop 1s forwards;
+}
+.slide-from-bottom {
+  animation: slideInFromBottom 1s forwards;
+}
+.fade-in {
+  animation: fadeIn 3s forwards;
+}
