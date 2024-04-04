@@ -6,8 +6,473 @@
     <title>Document</title>
     <link href="./style.css" rel="stylesheet" />
     <link href="./output.css" rel="stylesheet" />
+    <script src="./scrips/index.js" type="text/javascript"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    <h1 class="text-blue-600 text-3xl font-bold underline">Hello world!</h1>
+    <div class="section-container overflow-hidden">
+      <!-- Section 1-->
+      <div class="fixed left-40 top-40 bg-purple-900 rounded-full">
+        <svg
+          version="1.1"
+          id="transring"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 414 414"
+          xml:space="preserve"
+          width="300"
+          height="300"
+        >
+          <path
+            id="Transparent_Ring"
+            class="transrg"
+            style="
+              opacity: 0.4;
+              fill: none;
+              stroke: #ffffff;
+              stroke-width: 2;
+              stroke-miterlimit: 10;
+              enable-background: new;
+            "
+            d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+          c-47.8,0-91-19.4-122.3-50.7"
+          ></path>
+
+          <path
+            id="Opaque_Ring"
+            class="transrgwht"
+            stroke-dasharray="0,1000"
+            style="
+              fill: none;
+              stroke: rgb(255, 255, 255);
+              stroke-width: 2;
+              stroke-miterlimit: 10;
+              stroke-dasharray: 10, 1000;
+            "
+            d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+          c-47.8,0-91-19.4-122.3-50.7"
+          ></path>
+
+          <g id="Dots1" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill1"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M84,80 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro1"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M84,80c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots2" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill2"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro2"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots3" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill3"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro3"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots4" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill4"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro4"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots5" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill5"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro5"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots6" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill6"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro6"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots7" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill7"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro7"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <section class="content-section">
+        <div class="flex h-screen w-screen">
+          <div
+            class="flex flex-col justify-end bg-purple-900 py-10 pl-14 gap-10 w-[45%]"
+          >
+            <div class="fade-in">
+              <h1 class="text-5xl text-white font-bold">ABC 123</h1>
+              <p class="text-white">We are the best</p>
+              <p class="text-white">web developement company</p>
+              <p class="text-white">in the world</p>
+            </div>
+            <div class="slide-from-bottom">
+              <p class="cursor-pointer text-white text-1xl">view case study</p>
+            </div>
+          </div>
+          <div class="bg-slate-100 w-[55%]">
+            <div class="flex justify-center items-center h-screen">
+              <img
+                class="slide-from-top drop-shadow-lg w-80"
+                src="./assets/section1/nexgtv-entertainment-mobile-app-development.png"
+                alt=""
+              />
+              <img
+                class="slide-from-bottom drop-shadow-lg w-80"
+                src="./assets/section1/nexgtv-mobile-app-ui-design.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2-->
+      <section class="content-section">
+        <div class="flex h-screen w-screen">
+          <div
+            class="flex flex-col justify-end bg-indigo-700 py-10 pl-14 gap-10 w-[45%]"
+          >
+            <div class="fade-in">
+              <h1 class="text-5xl text-white font-bold">ABC 234</h1>
+              <p class="text-white">We are the best</p>
+              <p class="text-white">web developement company</p>
+              <p class="text-white">in the world</p>
+            </div>
+            <div class="slide-from-bottom">
+              <p class="cursor-pointer text-white text-1xl">Coming soon</p>
+            </div>
+          </div>
+          <div class="relative bg-indigo-950 w-[55%] images-container">
+            <div class="h-screen">
+              <img
+                class="absolute w-56 right-10 top-0 drop-shadow-md slide-from-top"
+                src="./assets/section2/veme-app-ui-design.png"
+                alt=""
+              />
+              <img
+                class="absolute w-56 left-40 bottom-0 drop-shadow-md slide-from-bottom"
+                src="./assets/section2/veme-blockchain-app-developed.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3-->
+      <section class="content-section">
+        <div class="flex h-screen w-screen">
+          <div
+            class="flex flex-col justify-end bg-indigo-700 py-10 pl-14 gap-10 w-[45%]"
+          >
+            <div class="fade-in">
+              <h1 class="text-5xl text-white font-bold">ABC 345</h1>
+              <p class="text-white">We are the best</p>
+              <p class="text-white">web developement company</p>
+              <p class="text-white">in the world</p>
+            </div>
+            <div class="slide-from-bottom">
+              <p class="cursor-pointer text-white text-1xl">Coming soon</p>
+            </div>
+          </div>
+          <div class="relative bg-indigo-950 w-[55%] images-container">
+            <div class="h-screen">
+              <img
+                class="absolute w-64 left-40 top-40 drop-shadow-md slide-from-bottom"
+                src="./assets/section3/nasa-fitness-tracking-mobile-app.png"
+                alt=""
+              />
+              <img
+                class="absolute w-56 right-10 top-[-100px] drop-shadow-md slide-from-top"
+                src="./assets/section3/measure-total-body-weight-through-fitness-app.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 4-->
+      <section class="content-section">
+        <div class="flex h-screen w-screen">
+          <div
+            class="flex flex-col justify-end bg-sky-950 py-10 pl-14 gap-10 w-[45%]"
+          >
+            <div class="fade-in">
+              <h1 class="text-5xl text-white font-bold">ABC 456</h1>
+              <p class="text-white">We are the best</p>
+              <p class="text-white">web developement company</p>
+              <p class="text-white">in the world</p>
+            </div>
+            <div class="slide-from-bottom">
+              <p class="cursor-pointer text-white text-1xl">view case study</p>
+            </div>
+          </div>
+          <div class="bg-slate-950 w-[55%]">
+            <div class="relative h-screen">
+              <img
+                class="absolute w-56 left-0 top-0 slide-from-top drop-shadow-lg"
+                src="./assets/section4/pizza_box.png"
+                alt=""
+              />
+              <img
+                class="absolute w-36 right-10 top-0 slide-from-top drop-shadow-lg"
+                src="./assets/section4/dominos-bread.png"
+                alt=""
+              />
+              <img
+                class="absolute w-56 left-20 bottom-0 slide-from-bottom drop-shadow-lg"
+                src="./assets/section4/domi-img1.png"
+                alt=""
+              />
+
+              <img
+                class="absolute w-56 right-48 top-20 fade-in drop-shadow-lg"
+                src="./assets/section4/ux-strategy-for-mobile-app-devlopment.png"
+                alt=""
+              />
+              <img
+                class="absolute w-56 right-0 bottom-0 slide-from-bottom drop-shadow-lg"
+                src="./assets/section4/dominos-masala.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 5-->
+      <section class="content-section">
+        <div class="flex h-screen w-screen">
+          <div
+            class="flex flex-col justify-end bg-sky-700 py-10 pl-14 gap-10 w-[45%]"
+          >
+            <div class="fade-in">
+              <h1 class="text-5xl text-white font-bold">ABC 567</h1>
+              <p class="text-white">We are the best</p>
+              <p class="text-white">web developement company</p>
+              <p class="text-white">in the world</p>
+            </div>
+            <div class="slide-from-bottom">
+              <p class="cursor-pointer text-white text-1xl">view case study</p>
+            </div>
+          </div>
+          <div class="bg-sky-400 w-[55%]">
+            <div class="relative h-screen">
+              <img
+                class="absolute w-48 left-20 top-[-20px] slide-from-top drop-shadow-lg"
+                src="./assets/section5/karavan-social-networking-app-screen.png"
+                alt=""
+              />
+              <img
+                class="absolute w-48 right-[250px] top-[-10px] slide-from-top drop-shadow-lg"
+                src="./assets/section5/social-networking-app-case-study.png"
+                alt=""
+              />
+              <img
+                class="absolute w-48 right-0 top-20 slide-from-right drop-shadow-lg"
+                src="./assets/section5/karavan-social-networking-app-screen-2.png"
+                alt=""
+              />
+              <img
+                class="absolute w-48 left-20 bottom-[-100px] slide-from-bottom drop-shadow-lg"
+                src="./assets/section5/karavan_2.png"
+                alt=""
+              />
+              <img
+                class="absolute w-48 right-[250px] bottom-[-120px] slide-from-bottom drop-shadow-lg"
+                src="./assets/section5/karavan-social-networking-app-screen.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--section 6-->
+      <section class="content-section">
+        <div class="flex h-screen w-screen">
+          <div
+            class="flex flex-col justify-end bg-blue-900 py-10 pl-14 gap-10 w-[45%]"
+          >
+            <div class="fade-in">
+              <h1 class="text-5xl text-white font-bold">ABC 678</h1>
+              <p class="text-white">We are the best</p>
+              <p class="text-white">web developement company</p>
+              <p class="text-white">in the world</p>
+            </div>
+            <div class="slide-from-bottom">
+              <p class="cursor-pointer text-white text-1xl">view case study</p>
+            </div>
+          </div>
+          <div
+            class="bg-emerald-500 w-[55%]"
+            style="
+              background-image: url('./assets/section6/interior.jpg');
+              height: 100vh;
+            "
+          >
+            <div class="flex h-screen">
+              <img
+                class="justify-center items-center w-screen slide-from-bottom drop-shadow-lg z-10"
+                src="./assets/section6/erp-app-development-service.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--section 7-->
+      <section class="content-section">
+        <div class="flex h-screen w-screen">
+          <div
+            class="flex flex-col justify-end bg-emerald-700 py-10 pl-14 gap-10 w-[45%]"
+          >
+            <div class="fade-in">
+              <h1 class="text-5xl text-white font-bold">ABC 789</h1>
+              <p class="text-white">We are the best</p>
+              <p class="text-white">web developement company</p>
+              <p class="text-white">in the world</p>
+            </div>
+            <div class="slide-from-bottom">
+              <p class="cursor-pointer text-white text-1xl">view case study</p>
+            </div>
+          </div>
+          <div class="bg-emerald-500 w-[55%]">
+            <div class="relative h-screen">
+              <img
+                class="absolute w-80 left-[200px] bottom-[-40px] slide-from-bottom drop-shadow-lg z-10"
+                src="./assets/section7/melltoo-img2.png"
+                alt=""
+              />
+              <img
+                class="absolute w-64 right-20 bottom-[-40px] slide-from-bottom drop-shadow-lg"
+                src="./assets/section7/melltoo-img1.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
