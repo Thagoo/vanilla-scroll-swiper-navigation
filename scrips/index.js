@@ -4,39 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const sections = gsap.utils.toArray(".content-section");
   let currentSectionIndex = 0;
 
-  sections.forEach((section, index) => {
-    if (index > 0) {
-      // Skip the first section as it's already visible
-      ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        onEnter: () => {
-          // Show this section
-          section.style.display = "flex";
-
-          // Animate the images in column 2
-          // animateImages(section);
-          // Hide previous section
-          if (currentSectionIndex !== index) {
-            sections[currentSectionIndex].style.display = "none";
-            currentSectionIndex = index;
-          }
-        },
-        onLeaveBack: () => {
-          // animateImages(section);
-          // Hide this section when scrolling back
-          section.style.display = "none";
-          // Show the previous section
-          if (index > 0) {
-            sections[index - 1].style.display = "flex";
-            currentSectionIndex = index - 1;
-          }
-        },
-      });
-    }
-  });
-
-  // Path slider updates
+  // Function to activate and deactivate path slider points
   const bgColors = [
     "bg-purple-900",
     "bg-indigo-700",
@@ -48,7 +16,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   ];
   const pathSlider = document.getElementById("path-slider");
   const currentBgColor = /\bbg-.*?0\b/g;
-
   function upgradePathSlider(index) {
     pathSlider.className = pathSlider.className.replace(
       currentBgColor,
