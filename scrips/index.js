@@ -19,7 +19,6 @@ const currentBgColor = /\bbg-.*?0\b/g;
 function resetPathSliderPoints() {
   sections.forEach((_, index) => {
     gsap.to(`.dotsfill${index + 1}`, {
-      fill: "rgb(0, 146, 255)",
       opacity: 0,
     });
   });
@@ -29,10 +28,10 @@ function updatePathSlider(index) {
     currentBgColor,
     bgColors[index]
   );
+
   resetPathSliderPoints();
   for (let i = 1; i <= index + 1; i++) {
     gsap.to(`.dotsfill${i}`, {
-      fill: "rgb(0, 146, 255)",
       opacity: 1,
     });
   }
@@ -41,6 +40,7 @@ function updatePathSlider(index) {
 // Function to display the current section and hide others
 function goToSection(index) {
   currentSectionIndex = index;
+  updatePathSlider(currentSectionIndex);
   sections.forEach((section, i) => {
     section.style.display = i === index ? "flex" : "none";
   });
