@@ -55,10 +55,37 @@ function goToSection(index) {
   });
 }
 
-// Initial call for the first section
-//goToSection(currentSectionIndex);
+function scrollSection(e) {
+  const direction = e.deltaY > 0 ? 1 : -1;
 
-// Add listeners for mouse wheel events
+  if (direction >= 1 && currentSectionIndex < sections.length - 1) {
+    // Scrolling down
+    currentSectionIndex++;
+    goToSection(currentSectionIndex);
+    updatePathSlider(currentSectionIndex);
+  } else if (direction <= -1 && currentSectionIndex > 0) {
+    // Scrolling up
+    currentSectionIndex--;
+    goToSection(currentSectionIndex);
+    updatePathSlider(currentSectionIndex);
+  }
+}
+window.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+    if (e.key === "ArrowDown" && currentSectionIndex < sections.length - 1) {
+      // Scrolling down
+      currentSectionIndex++;
+      goToSection(currentSectionIndex);
+      updatePathSlider(currentSectionIndex);
+    } else if (e.key === "ArrowUp" && currentSectionIndex > 0) {
+      // Scrolling up
+      currentSectionIndex--;
+      goToSection(currentSectionIndex);
+      updatePathSlider(currentSectionIndex);
+    }
+  }
+});
+let isScrolling;
 window.addEventListener("wheel", (e) => {
   e.preventDefault();
   // Disable scroll indicator when scroll
@@ -66,17 +93,15 @@ window.addEventListener("wheel", (e) => {
 
   if (window.innerWidth < 768) {
     return;
-  }
-  const direction = e.deltaY > 0 ? 1 : -1;
-  if (direction === 1 && currentSectionIndex < sections.length - 1) {
-    // Scrolling down
-    currentSectionIndex++;
+  } else {
+    // Initial call for the first section
     goToSection(currentSectionIndex);
-    updatePathSlider(currentSectionIndex);
-  } else if (direction === -1 && currentSectionIndex > 0) {
-    // Scrolling up
-    currentSectionIndex--;
-    goToSection(currentSectionIndex);
-    updatePathSlider(currentSectionIndex);
   }
+
+  window.clearTimeout(isScrolling);
+
+  // Set a timeout to run after scrolling ends
+  isScrolling = setTimeout(() => {
+    scrollSection(e);
+  }, 66);
 });
