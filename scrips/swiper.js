@@ -1,3 +1,8 @@
+const swiperEl = document.getElementById("swiper-wrapper");
+
+if (window.innerWidth >= 768) {
+  swiperEl.classList.remove("swiper-wrapper");
+}
 var swiper = new Swiper(".swiper-container", {
   loop: true,
   pagination: {

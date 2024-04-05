@@ -1,8 +1,12 @@
-const scrollIndicator = document.getElementById("mouse-scroll-indicator");
 // Disable Scroll idicator after 4 secs
+const scrollIndicator = document.getElementById("mouse-scroll-indicator");
+
 setTimeout(() => {
   scrollIndicator.style.display = "none";
 }, 4000);
+
+//
+
 gsap.registerPlugin(ScrollTrigger);
 
 const sections = gsap.utils.toArray(".content-section");
