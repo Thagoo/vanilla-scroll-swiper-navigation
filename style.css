@@ -19,6 +19,9 @@ html {
   align-items: center;
 }
 
+.swiper-pagination-bullet-active {
+  background: white !important;
+}
 /* Slide in from left */
 @keyframes slideInFromLeft {
   from {
