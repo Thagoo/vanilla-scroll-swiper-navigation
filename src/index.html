@@ -9,546 +9,589 @@
     <script src="./scrips/index.js" type="text/javascript" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    <div class="section-container overflow-hidden">
-      <div class="hidden md:block relative w-[55vw]">
-        <div
-          id="path-slider"
-          class="absolute right-10 top-[80px] bg-purple-900 z-10 rounded-full"
+    <div class="hidden md:block relative w-[55vw]">
+      <div
+        id="path-slider"
+        class="absolute right-10 top-[80px] bg-purple-900 z-[2] rounded-full"
+      >
+        <svg
+          version="1.1"
+          id="transring"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 414 414"
+          xml:space="preserve"
+          width="300"
+          height="300"
         >
-          <svg
-            version="1.1"
-            id="transring"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 414 414"
-            xml:space="preserve"
-            width="300"
-            height="300"
-          >
-            <path
-              id="Transparent_Ring"
-              class="transrg"
-              style="
-                opacity: 0.4;
-                fill: none;
-                stroke: #ffffff;
-                stroke-width: 2;
-                stroke-miterlimit: 10;
-                enable-background: new;
-              "
-              d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
-          c-47.8,0-91-19.4-122.3-50.7"
-            ></path>
-
-            <path
-              id="Opaque_Ring"
-              class="transrgwht"
-              stroke-dasharray="0,1000"
-              style="
-                fill: none;
-                stroke: rgb(255, 255, 255);
-                stroke-width: 2;
-                stroke-miterlimit: 10;
-                stroke-dasharray: 10, 1000;
-              "
-              d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
-          c-47.8,0-91-19.4-122.3-50.7"
-            ></path>
-
-            <g id="Dots1" class="dots-nav">
-              <g>
-                <path
-                  class="dotsst dotsfill1 cursor-pointer"
-                  onclick="goToSection(0)"
-                  style="fill: #ffffff; opacity: 1"
-                  d="M84,80 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
-                ></path>
-              </g>
-              <g>
-                <path
-                  class="dotsstro1 cursore-pointer"
-                  onclick="goToSection(0)"
-                  style="
-                    opacity: 1;
-                    fill: none;
-                    stroke: rgb(255, 255, 255);
-                    stroke-width: 2;
-                    stroke-miterlimit: 10;
-                  "
-                  d="M84,80c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
-                ></path>
-              </g>
-            </g>
-            <g id="Dots2" class="dots-nav">
-              <g>
-                <path
-                  class="dotsst dotsfill2 cursor-pointer"
-                  onclick="goToSection(1)"
-                  style="fill: #ffffff; opacity: 0"
-                  d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
-                ></path>
-              </g>
-              <g>
-                <path
-                  class="dotsstro2 cursore-pointer"
-                  onclick="goToSection(1)"
-                  style="
-                    opacity: 1;
-                    fill: none;
-                    stroke: rgb(255, 255, 255);
-                    stroke-width: 2;
-                    stroke-miterlimit: 10;
-                  "
-                  d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
-                ></path>
-              </g>
-            </g>
-            <g id="Dots3" class="dots-nav">
-              <g>
-                <path
-                  class="dotsst dotsfill3 cursor-pointer"
-                  onclick="goToSection(2)"
-                  style="fill: #ffffff; opacity: 0"
-                  d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
-                ></path>
-              </g>
-              <g>
-                <path
-                  class="dotsstro3 cursore-pointer"
-                  onclick="goToSection(2)"
-                  style="
-                    opacity: 1;
-                    fill: none;
-                    stroke: rgb(255, 255, 255);
-                    stroke-width: 2;
-                    stroke-miterlimit: 10;
-                  "
-                  d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
-                ></path>
-              </g>
-            </g>
-            <g id="Dots4" class="dots-nav">
-              <g>
-                <path
-                  class="dotsst dotsfill4 cursor-pointer"
-                  onclick="goToSection(3)"
-                  style="fill: #ffffff; opacity: 0"
-                  d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
-                ></path>
-              </g>
-              <g>
-                <path
-                  class="dotsstro4 cursore-pointer"
-                  onclick="goToSection(3)"
-                  style="
-                    opacity: 1;
-                    fill: none;
-                    stroke: rgb(255, 255, 255);
-                    stroke-width: 2;
-                    stroke-miterlimit: 10;
-                  "
-                  d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
-                ></path>
-              </g>
-            </g>
-            <g id="Dots5" class="dots-nav">
-              <g>
-                <path
-                  class="dotsst dotsfill5 cursor-pointer"
-                  onclick="goToSection(4)"
-                  style="fill: #ffffff; opacity: 0"
-                  d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
-                ></path>
-              </g>
-              <g>
-                <path
-                  class="dotsstro5 cursore-pointer"
-                  onclick="goToSection(4)"
-                  style="
-                    opacity: 1;
-                    fill: none;
-                    stroke: rgb(255, 255, 255);
-                    stroke-width: 2;
-                    stroke-miterlimit: 10;
-                  "
-                  d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
-                ></path>
-              </g>
-            </g>
-            <g id="Dots6" class="dots-nav">
-              <g>
-                <path
-                  class="dotsst dotsfill6 cursor-pointer"
-                  onclick="goToSection(5)"
-                  style="fill: #ffffff; opacity: 0"
-                  d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
-                ></path>
-              </g>
-              <g>
-                <path
-                  class="dotsstro6 cursor-pointer"
-                  onclick="goToSection(5)"
-                  style="
-                    opacity: 1;
-                    fill: none;
-                    stroke: rgb(255, 255, 255);
-                    stroke-width: 2;
-                    stroke-miterlimit: 10;
-                  "
-                  d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
-                ></path>
-              </g>
-            </g>
-            <g id="Dots7" class="dots-nav">
-              <g>
-                <path
-                  class="dotsst dotsfill7 cursor-pointer"
-                  onclick="goToSection(6)"
-                  style="fill: #ffffff; opacity: 0"
-                  d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
-                ></path>
-              </g>
-              <g>
-                <path
-                  class="dotsstro7 cursore-pointer"
-                  onclick="goToSection()"
-                  style="
-                    opacity: 1;
-                    fill: none;
-                    stroke: rgb(255, 255, 255);
-                    stroke-width: 2;
-                    stroke-miterlimit: 10;
-                  "
-                  d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
-                ></path>
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-      <!-- Section 1-->
-      <section class="content-section">
-        <div class="flex flex-col-reverse md:flex-row h-screen w-screen">
-          <div
-            class="flex flex-col justify-end bg-purple-900 py-10 pl-14 gap-10 md:w-[45%] relative"
-          >
-            <div
-              class="hidden md:block absolute right-0 top-[200px] z-20 fade-in md:space-y-2"
-            >
-              <h1 class="text-5xl text-white font-bold">25M+ Downloads</h1>
-              <p class="text-xl text-white font-bold">
-                on appstore and google playstore
-              </p>
-            </div>
-
-            <div class="fade-in">
-              <img
-                src="./assets/mobile-app-of-the-year-by-entrepreneur.png"
-                alt=""
-                class="w-48 mb-4"
-              />
-              <h1 class="text-5xl text-white font-bold">ABC 123</h1>
-              <p class="text-white">We are the best</p>
-              <p class="text-white">web developement company</p>
-              <p class="text-white">in the world</p>
-            </div>
-            <div class="slide-from-bottom md:pb-0 pb-10">
-              <p class="cursor-pointer text-white text-1xl">view case study</p>
-            </div>
-          </div>
-          <div class="bg-slate-100 md:w-[55vw] h-full">
-            <div class="h-full flex justify-center items-center">
-              <img
-                class="slide-from-top drop-shadow-lg w-48 md:w-80"
-                src="./assets/section1/nexgtv-entertainment-mobile-app-development.png"
-                alt=""
-              />
-              <img
-                class="slide-from-bottom drop-shadow-lg w-48 md:w-80"
-                src="./assets/section1/nexgtv-mobile-app-ui-design.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 2-->
-      <section class="content-section">
-        <div class="flex h-screen w-screen">
-          <div
-            class="flex flex-col justify-end bg-indigo-700 py-10 pl-14 gap-10 w-[45%] relative"
-          >
-            <div class="absolute right-0 top-[200px] z-20 fade-in md:space-y-2">
-              <p class="text-xl text-white font-bold">The Next Big</p>
-              <h1 class="text-5xl text-white font-bold">Blockchain</h1>
-              <p class="text-xl text-white font-bold text-end">Revolution</p>
-            </div>
-
-            <div class="fade-in">
-              <h1 class="text-5xl text-white font-bold">ABC 234</h1>
-              <p class="text-white">We are the best</p>
-              <p class="text-white">web developement company</p>
-              <p class="text-white">in the world</p>
-            </div>
-            <div class="slide-from-bottom">
-              <p class="cursor-pointer text-white text-1xl">Coming soon</p>
-            </div>
-          </div>
-          <div class="relative bg-indigo-950 w-[55%] images-container">
-            <div class="h-screen">
-              <img
-                class="absolute w-56 right-10 top-0 drop-shadow-md slide-from-top"
-                src="./assets/section2/veme-app-ui-design.png"
-                alt=""
-              />
-              <img
-                class="absolute w-56 left-40 bottom-0 drop-shadow-md slide-from-bottom"
-                src="./assets/section2/veme-blockchain-app-developed.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 3-->
-      <section class="content-section">
-        <div class="flex h-screen w-screen">
-          <div
-            class="flex flex-col justify-end bg-indigo-950 py-10 pl-14 gap-10 w-[45%] relative"
-          >
-            <div class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2">
-              <p class="text-xl text-white font-bold">Powered by advance</p>
-              <img src="./assets/section3/nasa-mobile-app.png" class="w-64" />
-              <p class="text-xl text-white font-bold text-end">algorithms</p>
-            </div>
-
-            <div class="fade-in">
-              <h1 class="text-5xl text-white font-bold">ABC 345</h1>
-              <p class="text-white">We are the best</p>
-              <p class="text-white">web developement company</p>
-              <p class="text-white">in the world</p>
-            </div>
-            <div class="slide-from-bottom">
-              <p class="cursor-pointer text-white text-1xl">Coming soon</p>
-            </div>
-          </div>
-          <div class="relative bg-blue-950 w-[55%] images-container">
-            <div class="h-screen">
-              <img
-                class="absolute w-64 left-40 top-40 drop-shadow-md slide-from-bottom"
-                src="./assets/section3/nasa-fitness-tracking-mobile-app.png"
-                alt=""
-              />
-              <img
-                class="absolute w-56 right-10 top-[-100px] drop-shadow-md slide-from-top"
-                src="./assets/section3/measure-total-body-weight-through-fitness-app.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Section 4-->
-      <section class="content-section">
-        <div class="flex h-screen w-screen">
-          <div
-            class="flex flex-col justify-end bg-sky-950 py-10 pl-14 gap-10 w-[45%] relative"
-          >
-            <div class="absolute right-0 top-[200px] z-20 fade-in md:space-y-2">
-              <p class="text-xl text-white font-bold">Redefining</p>
-              <h1 class="text-5xl text-white font-bold">UX Strategy</h1>
-              <p class="text-xl text-white font-bold text-end">and UI design</p>
-            </div>
-            <div class="fade-in">
-              <h1 class="text-5xl text-white font-bold">ABC 456</h1>
-              <p class="text-white">We are the best</p>
-              <p class="text-white">web developement company</p>
-              <p class="text-white">in the world</p>
-            </div>
-            <div class="slide-from-bottom">
-              <p class="cursor-pointer text-white text-1xl">view case study</p>
-            </div>
-          </div>
-          <div class="bg-slate-950 w-[55%]">
-            <div class="relative h-screen">
-              <img
-                class="absolute w-56 left-0 top-0 slide-from-top drop-shadow-lg"
-                src="./assets/section4/pizza_box.png"
-                alt=""
-              />
-              <img
-                class="absolute w-36 right-10 top-0 slide-from-top drop-shadow-lg"
-                src="./assets/section4/dominos-bread.png"
-                alt=""
-              />
-              <img
-                class="absolute w-56 left-20 bottom-0 slide-from-bottom drop-shadow-lg"
-                src="./assets/section4/domi-img1.png"
-                alt=""
-              />
-
-              <img
-                class="absolute w-56 right-48 top-20 fade-in drop-shadow-lg"
-                src="./assets/section4/ux-strategy-for-mobile-app-devlopment.png"
-                alt=""
-              />
-              <img
-                class="absolute w-56 right-0 bottom-0 slide-from-bottom drop-shadow-lg"
-                src="./assets/section4/dominos-masala.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Section 5-->
-      <section class="content-section">
-        <div class="flex h-screen w-screen">
-          <div
-            class="flex flex-col justify-end bg-sky-700 py-10 pl-14 gap-10 w-[45%] relative"
-          >
-            <div class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2">
-              <p class="text-xl text-white font-bold">Text Headline</p>
-              <h1 class="text-5xl text-white font-bold">Text Headline</h1>
-              <p class="text-xl text-white font-bold text-end">
-                Footer Headline
-              </p>
-            </div>
-            <div class="fade-in">
-              <h1 class="text-5xl text-white font-bold">ABC 567</h1>
-              <p class="text-white">We are the best</p>
-              <p class="text-white">web developement company</p>
-              <p class="text-white">in the world</p>
-            </div>
-            <div class="slide-from-bottom">
-              <p class="cursor-pointer text-white text-1xl">view case study</p>
-            </div>
-          </div>
-          <div class="bg-sky-400 w-[55%]">
-            <div class="relative h-screen">
-              <img
-                class="absolute w-48 left-20 top-[-20px] slide-from-top drop-shadow-lg"
-                src="./assets/section5/karavan-social-networking-app-screen.png"
-                alt=""
-              />
-              <img
-                class="absolute w-48 right-[250px] top-[-10px] slide-from-top drop-shadow-lg"
-                src="./assets/section5/social-networking-app-case-study.png"
-                alt=""
-              />
-              <img
-                class="absolute w-48 right-0 top-20 slide-from-right drop-shadow-lg"
-                src="./assets/section5/karavan-social-networking-app-screen-2.png"
-                alt=""
-              />
-              <img
-                class="absolute w-48 left-20 bottom-[-100px] slide-from-bottom drop-shadow-lg"
-                src="./assets/section5/karavan_2.png"
-                alt=""
-              />
-              <img
-                class="absolute w-48 right-[250px] bottom-[-120px] slide-from-bottom drop-shadow-lg"
-                src="./assets/section5/karavan-social-networking-app-screen.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--section 6-->
-      <section class="content-section">
-        <div class="flex h-screen w-screen">
-          <div
-            class="flex flex-col justify-end bg-blue-900 py-10 pl-14 gap-10 w-[45%] relative"
-          >
-            <div class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2">
-              <p class="text-xl text-white font-bold">
-                Developing ERP Solution for
-              </p>
-              <h1 class="text-5xl text-white font-bold">Text Headline</h1>
-              <p class="text-xl text-white font-bold text-end">
-                in future industry
-              </p>
-            </div>
-            <div class="fade-in">
-              <h1 class="text-5xl text-white font-bold">ABC 678</h1>
-              <p class="text-white">We are the best</p>
-              <p class="text-white">web developement company</p>
-              <p class="text-white">in the world</p>
-            </div>
-            <div class="slide-from-bottom">
-              <p class="cursor-pointer text-white text-1xl">view case study</p>
-            </div>
-          </div>
-          <div
-            class="bg-emerald-500 w-[55%]"
+          <path
+            id="Transparent_Ring"
+            class="transrg"
             style="
-              background-image: url('./assets/section6/interior.jpg');
-              height: 100vh;
+              opacity: 0.4;
+              fill: none;
+              stroke: #ffffff;
+              stroke-width: 2;
+              stroke-miterlimit: 10;
+              enable-background: new;
             "
-          >
-            <div class="flex h-screen">
-              <img
-                class="justify-center items-center w-screen slide-from-bottom drop-shadow-lg z-1"
-                src="./assets/section6/erp-app-development-service.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+            d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+          c-47.8,0-91-19.4-122.3-50.7"
+          ></path>
 
-      <!--section 7-->
-      <section class="content-section">
-        <div class="flex h-screen w-screen">
-          <div
-            class="flex flex-col justify-end bg-emerald-700 py-10 pl-14 gap-10 w-[45%] relative"
-          >
-            <div class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2">
-              <p class="text-xl text-white font-bold">Biggest Classfields</p>
-              <h1 class="text-5xl text-white font-bold">East Asia</h1>
-              <p class="text-xl text-white font-bold text-end">Countries</p>
-            </div>
-            <div class="fade-in">
-              <img
-                src="./assets/mobile-app-of-the-year-by-entrepreneur.png"
-                alt=""
-                class="w-48 mb-4"
-              />
-              <h1 class="text-5xl text-white font-bold">ABC 789</h1>
-              <p class="text-white">We are the best</p>
-              <p class="text-white">web developement company</p>
-              <p class="text-white">in the world</p>
-            </div>
-            <div class="slide-from-bottom">
-              <p class="cursor-pointer text-white text-1xl">view case study</p>
-            </div>
-          </div>
-          <div class="bg-emerald-500 w-[55%]">
-            <div class="relative h-screen">
-              <img
-                class="absolute w-80 left-[200px] bottom-[-40px] slide-from-bottom drop-shadow-lg z-1"
-                src="./assets/section7/melltoo-img2.png"
-                alt=""
-              />
-              <img
-                class="absolute w-64 right-20 bottom-[-40px] slide-from-bottom drop-shadow-lg"
-                src="./assets/section7/melltoo-img1.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+          <path
+            id="Opaque_Ring"
+            class="transrgwht"
+            stroke-dasharray="0,1000"
+            style="
+              fill: none;
+              stroke: rgb(255, 255, 255);
+              stroke-width: 2;
+              stroke-miterlimit: 10;
+              stroke-dasharray: 10, 1000;
+            "
+            d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+          c-47.8,0-91-19.4-122.3-50.7"
+          ></path>
+
+          <g id="Dots1" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill1 cursor-pointer"
+                onclick="goToSection(0)"
+                style="fill: #ffffff; opacity: 1"
+                d="M84,80 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro1 cursore-pointer"
+                onclick="goToSection(0)"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M84,80c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots2" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill2 cursor-pointer"
+                onclick="goToSection(1)"
+                style="fill: #ffffff; opacity: 0"
+                d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro2 cursore-pointer"
+                onclick="goToSection(1)"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots3" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill3 cursor-pointer"
+                onclick="goToSection(2)"
+                style="fill: #ffffff; opacity: 0"
+                d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro3 cursore-pointer"
+                onclick="goToSection(2)"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots4" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill4 cursor-pointer"
+                onclick="goToSection(3)"
+                style="fill: #ffffff; opacity: 0"
+                d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro4 cursore-pointer"
+                onclick="goToSection(3)"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots5" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill5 cursor-pointer"
+                onclick="goToSection(4)"
+                style="fill: #ffffff; opacity: 0"
+                d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro5 cursore-pointer"
+                onclick="goToSection(4)"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots6" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill6 cursor-pointer"
+                onclick="goToSection(5)"
+                style="fill: #ffffff; opacity: 0"
+                d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro6 cursor-pointer"
+                onclick="goToSection(5)"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots7" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill7 cursor-pointer"
+                onclick="goToSection(6)"
+                style="fill: #ffffff; opacity: 0"
+                d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro7 cursore-pointer"
+                onclick="goToSection(6)"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
     </div>
+    <!-- Section 1-->
+
+    <div class="overflow-hidden swiper-container">
+      <div id="swiper-wrapper" class="md:swiper-wrapper">
+        <section class="content-section swiper-slide">
+          <div class="flex flex-col-reverse md:flex-row h-screen w-screen">
+            <div
+              class="flex flex-col justify-end bg-purple-900 py-10 pl-14 gap-10 md:w-[45%] relative"
+            >
+              <div
+                class="hidden md:block absolute right-0 top-[200px] fade-in md:space-y-2 z-20"
+              >
+                <h1 class="text-5xl text-white font-bold">25M+ Downloads</h1>
+                <p class="text-xl text-white font-bold">
+                  on appstore and google playstore
+                </p>
+              </div>
+
+              <div class="fade-in">
+                <img
+                  src="./assets/mobile-app-of-the-year-by-entrepreneur.png"
+                  alt=""
+                  class="w-48 mb-4"
+                />
+                <h1 class="text-5xl text-white font-bold">ABC 123</h1>
+                <p class="text-white">We are the best</p>
+                <p class="text-white">web developement company</p>
+                <p class="text-white">in the world</p>
+              </div>
+              <div class="slide-from-bottom md:pb-0 pb-10">
+                <p class="cursor-pointer text-white text-1xl">
+                  view case study
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-100 md:w-[55vw] h-full">
+              <div class="h-full flex justify-center items-center">
+                <img
+                  class="slide-from-top drop-shadow-lg w-48 md:w-80"
+                  src="./assets/section1/nexgtv-entertainment-mobile-app-development.png"
+                  alt=""
+                />
+                <img
+                  class="slide-from-bottom drop-shadow-lg w-48 md:w-80"
+                  src="./assets/section1/nexgtv-mobile-app-ui-design.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2-->
+        <section class="content-section swiper-slide">
+          <div class="flex h-screen w-screen">
+            <div
+              class="flex flex-col justify-end bg-indigo-700 py-10 pl-14 gap-10 w-[45%] relative"
+            >
+              <div
+                class="absolute right-0 top-[200px] z-20 fade-in md:space-y-2"
+              >
+                <p class="text-xl text-white font-bold">The Next Big</p>
+                <h1 class="text-5xl text-white font-bold">Blockchain</h1>
+                <p class="text-xl text-white font-bold text-end">Revolution</p>
+              </div>
+
+              <div class="fade-in">
+                <h1 class="text-5xl text-white font-bold">ABC 234</h1>
+                <p class="text-white">We are the best</p>
+                <p class="text-white">web developement company</p>
+                <p class="text-white">in the world</p>
+              </div>
+              <div class="slide-from-bottom">
+                <p class="cursor-pointer text-white text-1xl">Coming soon</p>
+              </div>
+            </div>
+            <div class="relative bg-indigo-950 w-[55%] images-container">
+              <div class="h-screen">
+                <img
+                  class="absolute w-56 right-10 top-0 drop-shadow-md slide-from-top"
+                  src="./assets/section2/veme-app-ui-design.png"
+                  alt=""
+                />
+                <img
+                  class="absolute w-56 left-40 bottom-0 drop-shadow-md slide-from-bottom"
+                  src="./assets/section2/veme-blockchain-app-developed.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3-->
+        <section class="content-section swiper-slide">
+          <div class="flex h-screen w-screen">
+            <div
+              class="flex flex-col justify-end bg-indigo-950 py-10 pl-14 gap-10 w-[45%] relative"
+            >
+              <div
+                class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2"
+              >
+                <p class="text-xl text-white font-bold">Powered by advance</p>
+                <img src="./assets/section3/nasa-mobile-app.png" class="w-64" />
+                <p class="text-xl text-white font-bold text-end">algorithms</p>
+              </div>
+
+              <div class="fade-in">
+                <h1 class="text-5xl text-white font-bold">ABC 345</h1>
+                <p class="text-white">We are the best</p>
+                <p class="text-white">web developement company</p>
+                <p class="text-white">in the world</p>
+              </div>
+              <div class="slide-from-bottom">
+                <p class="cursor-pointer text-white text-1xl">Coming soon</p>
+              </div>
+            </div>
+            <div class="relative bg-blue-950 w-[55%] images-container">
+              <div class="h-screen">
+                <img
+                  class="absolute w-64 left-40 top-40 drop-shadow-md slide-from-bottom"
+                  src="./assets/section3/nasa-fitness-tracking-mobile-app.png"
+                  alt=""
+                />
+                <img
+                  class="absolute w-56 right-10 top-[-100px] drop-shadow-md slide-from-top"
+                  src="./assets/section3/measure-total-body-weight-through-fitness-app.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section 4-->
+        <section class="content-section swiper-slide">
+          <div class="flex h-screen w-screen">
+            <div
+              class="flex flex-col justify-end bg-sky-950 py-10 pl-14 gap-10 w-[45%] relative"
+            >
+              <div
+                class="absolute right-0 top-[200px] z-20 fade-in md:space-y-2"
+              >
+                <p class="text-xl text-white font-bold">Redefining</p>
+                <h1 class="text-5xl text-white font-bold">UX Strategy</h1>
+                <p class="text-xl text-white font-bold text-end">
+                  and UI design
+                </p>
+              </div>
+              <div class="fade-in">
+                <h1 class="text-5xl text-white font-bold">ABC 456</h1>
+                <p class="text-white">We are the best</p>
+                <p class="text-white">web developement company</p>
+                <p class="text-white">in the world</p>
+              </div>
+              <div class="slide-from-bottom">
+                <p class="cursor-pointer text-white text-1xl">
+                  view case study
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-950 w-[55%]">
+              <div class="relative h-screen">
+                <img
+                  class="absolute w-56 left-0 top-0 slide-from-top drop-shadow-lg"
+                  src="./assets/section4/pizza_box.png"
+                  alt=""
+                />
+                <img
+                  class="absolute w-36 right-10 top-0 slide-from-top drop-shadow-lg"
+                  src="./assets/section4/dominos-bread.png"
+                  alt=""
+                />
+                <img
+                  class="absolute w-56 left-20 bottom-0 slide-from-bottom drop-shadow-lg"
+                  src="./assets/section4/domi-img1.png"
+                  alt=""
+                />
+
+                <img
+                  class="absolute w-56 right-48 top-20 fade-in drop-shadow-lg"
+                  src="./assets/section4/ux-strategy-for-mobile-app-devlopment.png"
+                  alt=""
+                />
+                <img
+                  class="absolute w-56 right-0 bottom-0 slide-from-bottom drop-shadow-lg"
+                  src="./assets/section4/dominos-masala.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section 5-->
+        <section class="content-section swiper-slide">
+          <div class="flex h-screen w-screen">
+            <div
+              class="flex flex-col justify-end bg-sky-700 py-10 pl-14 gap-10 w-[45%] relative"
+            >
+              <div
+                class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2"
+              >
+                <p class="text-xl text-white font-bold">Text Headline</p>
+                <h1 class="text-5xl text-white font-bold">Text Headline</h1>
+                <p class="text-xl text-white font-bold text-end">
+                  Footer Headline
+                </p>
+              </div>
+              <div class="fade-in">
+                <h1 class="text-5xl text-white font-bold">ABC 567</h1>
+                <p class="text-white">We are the best</p>
+                <p class="text-white">web developement company</p>
+                <p class="text-white">in the world</p>
+              </div>
+              <div class="slide-from-bottom">
+                <p class="cursor-pointer text-white text-1xl">
+                  view case study
+                </p>
+              </div>
+            </div>
+            <div class="bg-sky-400 w-[55%]">
+              <div class="relative h-screen">
+                <img
+                  class="absolute w-48 left-20 top-[-20px] slide-from-top drop-shadow-lg"
+                  src="./assets/section5/karavan-social-networking-app-screen.png"
+                  alt=""
+                />
+                <img
+                  class="absolute w-48 right-[250px] top-[-10px] slide-from-top drop-shadow-lg"
+                  src="./assets/section5/social-networking-app-case-study.png"
+                  alt=""
+                />
+                <img
+                  class="absolute w-48 right-0 top-20 slide-from-right drop-shadow-lg"
+                  src="./assets/section5/karavan-social-networking-app-screen-2.png"
+                  alt=""
+                />
+                <img
+                  class="absolute w-48 left-20 bottom-[-100px] slide-from-bottom drop-shadow-lg"
+                  src="./assets/section5/karavan_2.png"
+                  alt=""
+                />
+                <img
+                  class="absolute w-48 right-[250px] bottom-[-120px] slide-from-bottom drop-shadow-lg"
+                  src="./assets/section5/karavan-social-networking-app-screen.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--section 6-->
+        <section class="content-section swiper-slide">
+          <div class="flex h-screen w-screen">
+            <div
+              class="flex flex-col justify-end bg-blue-900 py-10 pl-14 gap-10 w-[45%] relative"
+            >
+              <div
+                class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2"
+              >
+                <p class="text-xl text-white font-bold">
+                  Developing ERP Solution for
+                </p>
+                <h1 class="text-5xl text-white font-bold">Text Headline</h1>
+                <p class="text-xl text-white font-bold text-end">
+                  in future industry
+                </p>
+              </div>
+              <div class="fade-in">
+                <h1 class="text-5xl text-white font-bold">ABC 678</h1>
+                <p class="text-white">We are the best</p>
+                <p class="text-white">web developement company</p>
+                <p class="text-white">in the world</p>
+              </div>
+              <div class="slide-from-bottom">
+                <p class="cursor-pointer text-white text-1xl">
+                  view case study
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-emerald-500 w-[55%]"
+              style="
+                background-image: url('./assets/section6/interior.jpg');
+                height: 100vh;
+              "
+            >
+              <div class="flex h-screen">
+                <img
+                  class="justify-center items-center w-screen slide-from-bottom drop-shadow-lg z-1"
+                  src="./assets/section6/erp-app-development-service.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--section 7-->
+        <section class="content-section swiper-slide">
+          <div class="flex h-screen w-screen">
+            <div
+              class="flex flex-col justify-end bg-emerald-700 py-10 pl-14 gap-10 w-[45%] relative"
+            >
+              <div
+                class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2"
+              >
+                <p class="text-xl text-white font-bold">Biggest Classfields</p>
+                <h1 class="text-5xl text-white font-bold">East Asia</h1>
+                <p class="text-xl text-white font-bold text-end">Countries</p>
+              </div>
+              <div class="fade-in">
+                <img
+                  src="./assets/mobile-app-of-the-year-by-entrepreneur.png"
+                  alt=""
+                  class="w-48 mb-4"
+                />
+                <h1 class="text-5xl text-white font-bold">ABC 789</h1>
+                <p class="text-white">We are the best</p>
+                <p class="text-white">web developement company</p>
+                <p class="text-white">in the world</p>
+              </div>
+              <div class="slide-from-bottom">
+                <p class="cursor-pointer text-white text-1xl">
+                  view case study
+                </p>
+              </div>
+            </div>
+            <div class="bg-emerald-500 w-[55%]">
+              <div class="relative h-screen">
+                <img
+                  class="absolute w-80 left-[200px] bottom-[-40px] slide-from-bottom drop-shadow-lg z-1"
+                  src="./assets/section7/melltoo-img2.png"
+                  alt=""
+                />
+                <img
+                  class="absolute w-64 right-20 bottom-[-40px] slide-from-bottom drop-shadow-lg"
+                  src="./assets/section7/melltoo-img1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="md:hidden swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="md:hidden swiper-button-prev"></div>
+      <div class="md:hidden swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="md:hidden swiper-scrollbar"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Link to your external JS file -->
+    <script src="./scrips/swiper.js"></script>
   </body>
 </html>

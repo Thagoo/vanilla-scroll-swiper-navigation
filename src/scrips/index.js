@@ -47,7 +47,7 @@ function goToSection(index) {
 }
 
 // Initial call for the first section
-goToSection(currentSectionIndex);
+//goToSection(currentSectionIndex);
 
 // Add listeners for mouse wheel events
 window.addEventListener("wheel", (e) => {
