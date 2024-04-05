@@ -63,6 +63,10 @@ window.addEventListener("wheel", (e) => {
   e.preventDefault();
   // Disable scroll indicator when scroll
   scrollIndicator.style.display = "none";
+
+  if (window.innerWidth < 768) {
+    return;
+  }
   const direction = e.deltaY > 0 ? 1 : -1;
   if (direction === 1 && currentSectionIndex < sections.length - 1) {
     // Scrolling down
