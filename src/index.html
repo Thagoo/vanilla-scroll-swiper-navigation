@@ -14,212 +14,229 @@
   </head>
   <body>
     <div class="section-container overflow-hidden">
-      <!-- Section 1-->
-      <div class="fixed left-40 top-40 bg-purple-900 rounded-full">
-        <svg
-          version="1.1"
-          id="transring"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 414 414"
-          xml:space="preserve"
-          width="300"
-          height="300"
+      <div class="relative w-[55vw]">
+        <div
+          id="path-slider"
+          class="absolute right-10 top-[80px] bg-purple-900 z-10 rounded-full"
         >
-          <path
-            id="Transparent_Ring"
-            class="transrg"
-            style="
-              opacity: 0.4;
-              fill: none;
-              stroke: #ffffff;
-              stroke-width: 2;
-              stroke-miterlimit: 10;
-              enable-background: new;
-            "
-            d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+          <svg
+            version="1.1"
+            id="transring"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 414 414"
+            xml:space="preserve"
+            width="300"
+            height="300"
+          >
+            <path
+              id="Transparent_Ring"
+              class="transrg"
+              style="
+                opacity: 0.4;
+                fill: none;
+                stroke: #ffffff;
+                stroke-width: 2;
+                stroke-miterlimit: 10;
+                enable-background: new;
+              "
+              d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
           c-47.8,0-91-19.4-122.3-50.7"
-          ></path>
+            ></path>
 
-          <path
-            id="Opaque_Ring"
-            class="transrgwht"
-            stroke-dasharray="0,1000"
-            style="
-              fill: none;
-              stroke: rgb(255, 255, 255);
-              stroke-width: 2;
-              stroke-miterlimit: 10;
-              stroke-dasharray: 10, 1000;
-            "
-            d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+            <path
+              id="Opaque_Ring"
+              class="transrgwht"
+              stroke-dasharray="0,1000"
+              style="
+                fill: none;
+                stroke: rgb(255, 255, 255);
+                stroke-width: 2;
+                stroke-miterlimit: 10;
+                stroke-dasharray: 10, 1000;
+              "
+              d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
           c-47.8,0-91-19.4-122.3-50.7"
-          ></path>
+            ></path>
 
-          <g id="Dots1" class="dots-nav">
-            <g>
-              <path
-                class="dotsst dotsfill1"
-                style="fill: rgb(0, 146, 255); opacity: 1"
-                d="M84,80 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
-              ></path>
+            <g id="Dots1" class="dots-nav">
+              <g>
+                <path
+                  class="dotsst dotsfill1"
+                  style="fill: rgb(0, 146, 255); opacity: 1"
+                  d="M84,80 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
+                ></path>
+              </g>
+              <g>
+                <path
+                  class="dotsstro1"
+                  style="
+                    opacity: 1;
+                    fill: none;
+                    stroke: rgb(255, 255, 255);
+                    stroke-width: 2;
+                    stroke-miterlimit: 10;
+                  "
+                  d="M84,80c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
+                ></path>
+              </g>
             </g>
-            <g>
-              <path
-                class="dotsstro1"
-                style="
-                  opacity: 1;
-                  fill: none;
-                  stroke: rgb(255, 255, 255);
-                  stroke-width: 2;
-                  stroke-miterlimit: 10;
-                "
-                d="M84,80c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
-              ></path>
+            <g id="Dots2" class="dots-nav">
+              <g>
+                <path
+                  class="dotsst dotsfill2"
+                  style="fill: rgb(0, 146, 255); opacity: 0"
+                  d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
+                ></path>
+              </g>
+              <g>
+                <path
+                  class="dotsstro2"
+                  style="
+                    opacity: 1;
+                    fill: none;
+                    stroke: rgb(255, 255, 255);
+                    stroke-width: 2;
+                    stroke-miterlimit: 10;
+                  "
+                  d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
+                ></path>
+              </g>
             </g>
-          </g>
-          <g id="Dots2" class="dots-nav">
-            <g>
-              <path
-                class="dotsst dotsfill2"
-                style="fill: rgb(0, 146, 255); opacity: 1"
-                d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
-              ></path>
+            <g id="Dots3" class="dots-nav">
+              <g>
+                <path
+                  class="dotsst dotsfill3"
+                  style="fill: rgb(0, 146, 255); opacity: 0"
+                  d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
+                ></path>
+              </g>
+              <g>
+                <path
+                  class="dotsstro3"
+                  style="
+                    opacity: 1;
+                    fill: none;
+                    stroke: rgb(255, 255, 255);
+                    stroke-width: 2;
+                    stroke-miterlimit: 10;
+                  "
+                  d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
+                ></path>
+              </g>
             </g>
-            <g>
-              <path
-                class="dotsstro2"
-                style="
-                  opacity: 1;
-                  fill: none;
-                  stroke: rgb(255, 255, 255);
-                  stroke-width: 2;
-                  stroke-miterlimit: 10;
-                "
-                d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
-              ></path>
+            <g id="Dots4" class="dots-nav">
+              <g>
+                <path
+                  class="dotsst dotsfill4"
+                  style="fill: rgb(0, 146, 255); opacity: 0"
+                  d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
+                ></path>
+              </g>
+              <g>
+                <path
+                  class="dotsstro4"
+                  style="
+                    opacity: 1;
+                    fill: none;
+                    stroke: rgb(255, 255, 255);
+                    stroke-width: 2;
+                    stroke-miterlimit: 10;
+                  "
+                  d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
+                ></path>
+              </g>
             </g>
-          </g>
-          <g id="Dots3" class="dots-nav">
-            <g>
-              <path
-                class="dotsst dotsfill3"
-                style="fill: rgb(0, 146, 255); opacity: 1"
-                d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
-              ></path>
+            <g id="Dots5" class="dots-nav">
+              <g>
+                <path
+                  class="dotsst dotsfill5"
+                  style="fill: rgb(0, 146, 255); opacity: 0"
+                  d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
+                ></path>
+              </g>
+              <g>
+                <path
+                  class="dotsstro5"
+                  style="
+                    opacity: 1;
+                    fill: none;
+                    stroke: rgb(255, 255, 255);
+                    stroke-width: 2;
+                    stroke-miterlimit: 10;
+                  "
+                  d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
+                ></path>
+              </g>
             </g>
-            <g>
-              <path
-                class="dotsstro3"
-                style="
-                  opacity: 1;
-                  fill: none;
-                  stroke: rgb(255, 255, 255);
-                  stroke-width: 2;
-                  stroke-miterlimit: 10;
-                "
-                d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
-              ></path>
+            <g id="Dots6" class="dots-nav">
+              <g>
+                <path
+                  class="dotsst dotsfill6"
+                  style="fill: rgb(0, 146, 255); opacity: 0"
+                  d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
+                ></path>
+              </g>
+              <g>
+                <path
+                  class="dotsstro6"
+                  style="
+                    opacity: 1;
+                    fill: none;
+                    stroke: rgb(255, 255, 255);
+                    stroke-width: 2;
+                    stroke-miterlimit: 10;
+                  "
+                  d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
+                ></path>
+              </g>
             </g>
-          </g>
-          <g id="Dots4" class="dots-nav">
-            <g>
-              <path
-                class="dotsst dotsfill4"
-                style="fill: rgb(0, 146, 255); opacity: 1"
-                d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
-              ></path>
+            <g id="Dots7" class="dots-nav">
+              <g>
+                <path
+                  class="dotsst dotsfill7"
+                  style="fill: rgb(0, 146, 255); opacity: 0"
+                  d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
+                ></path>
+              </g>
+              <g>
+                <path
+                  class="dotsstro7"
+                  style="
+                    opacity: 1;
+                    fill: none;
+                    stroke: rgb(255, 255, 255);
+                    stroke-width: 2;
+                    stroke-miterlimit: 10;
+                  "
+                  d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
+                ></path>
+              </g>
             </g>
-            <g>
-              <path
-                class="dotsstro4"
-                style="
-                  opacity: 1;
-                  fill: none;
-                  stroke: rgb(255, 255, 255);
-                  stroke-width: 2;
-                  stroke-miterlimit: 10;
-                "
-                d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
-              ></path>
-            </g>
-          </g>
-          <g id="Dots5" class="dots-nav">
-            <g>
-              <path
-                class="dotsst dotsfill5"
-                style="fill: rgb(0, 146, 255); opacity: 1"
-                d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
-              ></path>
-            </g>
-            <g>
-              <path
-                class="dotsstro5"
-                style="
-                  opacity: 1;
-                  fill: none;
-                  stroke: rgb(255, 255, 255);
-                  stroke-width: 2;
-                  stroke-miterlimit: 10;
-                "
-                d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
-              ></path>
-            </g>
-          </g>
-          <g id="Dots6" class="dots-nav">
-            <g>
-              <path
-                class="dotsst dotsfill6"
-                style="fill: rgb(0, 146, 255); opacity: 1"
-                d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
-              ></path>
-            </g>
-            <g>
-              <path
-                class="dotsstro6"
-                style="
-                  opacity: 1;
-                  fill: none;
-                  stroke: rgb(255, 255, 255);
-                  stroke-width: 2;
-                  stroke-miterlimit: 10;
-                "
-                d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
-              ></path>
-            </g>
-          </g>
-          <g id="Dots7" class="dots-nav">
-            <g>
-              <path
-                class="dotsst dotsfill7"
-                style="fill: rgb(0, 146, 255); opacity: 1"
-                d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
-              ></path>
-            </g>
-            <g>
-              <path
-                class="dotsstro7"
-                style="
-                  opacity: 1;
-                  fill: none;
-                  stroke: rgb(255, 255, 255);
-                  stroke-width: 2;
-                  stroke-miterlimit: 10;
-                "
-                d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
-              ></path>
-            </g>
-          </g>
-        </svg>
+          </svg>
+        </div>
       </div>
+      <!-- Section 1-->
       <section class="content-section">
         <div class="flex h-screen w-screen">
           <div
-            class="flex flex-col justify-end bg-purple-900 py-10 pl-14 gap-10 w-[45%]"
+            class="flex flex-col justify-end bg-purple-900 py-10 pl-14 gap-10 w-[45%] relative"
           >
+            <div class="absolute right-0 top-[200px] z-20 fade-in md:space-y-2">
+              <h1 class="text-5xl text-white font-bold">25M+ Downloads</h1>
+              <p class="text-xl text-white font-bold">
+                on appstore and google playstore
+              </p>
+            </div>
+
             <div class="fade-in">
+              <img
+                src="./assets/mobile-app-of-the-year-by-entrepreneur.png"
+                alt=""
+                class="w-48 mb-4"
+              />
               <h1 class="text-5xl text-white font-bold">ABC 123</h1>
               <p class="text-white">We are the best</p>
               <p class="text-white">web developement company</p>
@@ -229,7 +246,7 @@
               <p class="cursor-pointer text-white text-1xl">view case study</p>
             </div>
           </div>
-          <div class="bg-slate-100 w-[55%]">
+          <div class="bg-slate-100 w-[55vw]">
             <div class="flex justify-center items-center h-screen">
               <img
                 class="slide-from-top drop-shadow-lg w-80"
@@ -250,8 +267,14 @@
       <section class="content-section">
         <div class="flex h-screen w-screen">
           <div
-            class="flex flex-col justify-end bg-indigo-700 py-10 pl-14 gap-10 w-[45%]"
+            class="flex flex-col justify-end bg-indigo-700 py-10 pl-14 gap-10 w-[45%] relative"
           >
+            <div class="absolute right-0 top-[200px] z-20 fade-in md:space-y-2">
+              <p class="text-xl text-white font-bold">The Next Big</p>
+              <h1 class="text-5xl text-white font-bold">Blockchain</h1>
+              <p class="text-xl text-white font-bold text-end">Revolution</p>
+            </div>
+
             <div class="fade-in">
               <h1 class="text-5xl text-white font-bold">ABC 234</h1>
               <p class="text-white">We are the best</p>
@@ -283,8 +306,14 @@
       <section class="content-section">
         <div class="flex h-screen w-screen">
           <div
-            class="flex flex-col justify-end bg-indigo-700 py-10 pl-14 gap-10 w-[45%]"
+            class="flex flex-col justify-end bg-indigo-950 py-10 pl-14 gap-10 w-[45%] relative"
           >
+            <div class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2">
+              <p class="text-xl text-white font-bold">Powered by advance</p>
+              <img src="./assets/section3/nasa-mobile-app.png" class="w-64" />
+              <p class="text-xl text-white font-bold text-end">algorithms</p>
+            </div>
+
             <div class="fade-in">
               <h1 class="text-5xl text-white font-bold">ABC 345</h1>
               <p class="text-white">We are the best</p>
@@ -295,7 +324,7 @@
               <p class="cursor-pointer text-white text-1xl">Coming soon</p>
             </div>
           </div>
-          <div class="relative bg-indigo-950 w-[55%] images-container">
+          <div class="relative bg-blue-950 w-[55%] images-container">
             <div class="h-screen">
               <img
                 class="absolute w-64 left-40 top-40 drop-shadow-md slide-from-bottom"
@@ -315,8 +344,13 @@
       <section class="content-section">
         <div class="flex h-screen w-screen">
           <div
-            class="flex flex-col justify-end bg-sky-950 py-10 pl-14 gap-10 w-[45%]"
+            class="flex flex-col justify-end bg-sky-950 py-10 pl-14 gap-10 w-[45%] relative"
           >
+            <div class="absolute right-0 top-[200px] z-20 fade-in md:space-y-2">
+              <p class="text-xl text-white font-bold">Redefining</p>
+              <h1 class="text-5xl text-white font-bold">UX Strategy</h1>
+              <p class="text-xl text-white font-bold text-end">and UI design</p>
+            </div>
             <div class="fade-in">
               <h1 class="text-5xl text-white font-bold">ABC 456</h1>
               <p class="text-white">We are the best</p>
@@ -363,8 +397,15 @@
       <section class="content-section">
         <div class="flex h-screen w-screen">
           <div
-            class="flex flex-col justify-end bg-sky-700 py-10 pl-14 gap-10 w-[45%]"
+            class="flex flex-col justify-end bg-sky-700 py-10 pl-14 gap-10 w-[45%] relative"
           >
+            <div class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2">
+              <p class="text-xl text-white font-bold">Text Headline</p>
+              <h1 class="text-5xl text-white font-bold">Text Headline</h1>
+              <p class="text-xl text-white font-bold text-end">
+                Footer Headline
+              </p>
+            </div>
             <div class="fade-in">
               <h1 class="text-5xl text-white font-bold">ABC 567</h1>
               <p class="text-white">We are the best</p>
@@ -411,8 +452,17 @@
       <section class="content-section">
         <div class="flex h-screen w-screen">
           <div
-            class="flex flex-col justify-end bg-blue-900 py-10 pl-14 gap-10 w-[45%]"
+            class="flex flex-col justify-end bg-blue-900 py-10 pl-14 gap-10 w-[45%] relative"
           >
+            <div class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2">
+              <p class="text-xl text-white font-bold">
+                Developing ERP Solution for
+              </p>
+              <h1 class="text-5xl text-white font-bold">Text Headline</h1>
+              <p class="text-xl text-white font-bold text-end">
+                in future industry
+              </p>
+            </div>
             <div class="fade-in">
               <h1 class="text-5xl text-white font-bold">ABC 678</h1>
               <p class="text-white">We are the best</p>
@@ -432,7 +482,7 @@
           >
             <div class="flex h-screen">
               <img
-                class="justify-center items-center w-screen slide-from-bottom drop-shadow-lg z-10"
+                class="justify-center items-center w-screen slide-from-bottom drop-shadow-lg z-1"
                 src="./assets/section6/erp-app-development-service.png"
                 alt=""
               />
@@ -445,9 +495,19 @@
       <section class="content-section">
         <div class="flex h-screen w-screen">
           <div
-            class="flex flex-col justify-end bg-emerald-700 py-10 pl-14 gap-10 w-[45%]"
+            class="flex flex-col justify-end bg-emerald-700 py-10 pl-14 gap-10 w-[45%] relative"
           >
+            <div class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2">
+              <p class="text-xl text-white font-bold">Biggest Classfields</p>
+              <h1 class="text-5xl text-white font-bold">East Asia</h1>
+              <p class="text-xl text-white font-bold text-end">Countries</p>
+            </div>
             <div class="fade-in">
+              <img
+                src="./assets/mobile-app-of-the-year-by-entrepreneur.png"
+                alt=""
+                class="w-48 mb-4"
+              />
               <h1 class="text-5xl text-white font-bold">ABC 789</h1>
               <p class="text-white">We are the best</p>
               <p class="text-white">web developement company</p>
@@ -460,7 +520,7 @@
           <div class="bg-emerald-500 w-[55%]">
             <div class="relative h-screen">
               <img
-                class="absolute w-80 left-[200px] bottom-[-40px] slide-from-bottom drop-shadow-lg z-10"
+                class="absolute w-80 left-[200px] bottom-[-40px] slide-from-bottom drop-shadow-lg z-1"
                 src="./assets/section7/melltoo-img2.png"
                 alt=""
               />
