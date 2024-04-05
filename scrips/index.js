@@ -1,3 +1,8 @@
+const scrollIndicator = document.getElementById("mouse-scroll-indicator");
+// Disable Scroll idicator after 4 secs
+setTimeout(() => {
+  scrollIndicator.style.display = "none";
+}, 4000);
 gsap.registerPlugin(ScrollTrigger);
 
 const sections = gsap.utils.toArray(".content-section");
@@ -52,7 +57,8 @@ function goToSection(index) {
 // Add listeners for mouse wheel events
 window.addEventListener("wheel", (e) => {
   e.preventDefault();
-
+  // Disable scroll indicator when scroll
+  scrollIndicator.style.display = "none";
   const direction = e.deltaY > 0 ? 1 : -1;
   if (direction === 1 && currentSectionIndex < sections.length - 1) {
     // Scrolling down
