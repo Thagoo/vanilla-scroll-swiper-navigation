@@ -295,12 +295,12 @@
 
         <!-- Section 2-->
         <section class="content-section swiper-slide">
-          <div class="flex h-screen w-screen">
+          <div class="flex flex-col-reverse md:flex-row h-screen w-screen">
             <div
-              class="flex flex-col justify-end bg-indigo-700 py-10 pl-14 gap-10 w-[45%] relative"
+              class="flex flex-col justify-end bg-indigo-700 py-10 pl-14 gap-10 md:w-[45%] relative"
             >
               <div
-                class="absolute right-0 top-[200px] z-20 fade-in md:space-y-2"
+                class="hidden md:block absolute right-0 top-[200px] fade-in md:space-y-2 z-20"
               >
                 <p class="text-xl text-white font-bold">The Next Big</p>
                 <h1 class="text-5xl text-white font-bold">Blockchain</h1>
@@ -313,19 +313,19 @@
                 <p class="text-white">web developement company</p>
                 <p class="text-white">in the world</p>
               </div>
-              <div class="slide-from-bottom">
+              <div class="slide-from-bottom md:pb-0 pb-10">
                 <p class="cursor-pointer text-white text-1xl">Coming soon</p>
               </div>
             </div>
-            <div class="relative bg-indigo-950 w-[55%] images-container">
-              <div class="h-screen">
+            <div class="md:relative bg-indigo-950 md:w-[55%] h-full">
+              <div class="flex items-end h-full">
                 <img
-                  class="absolute w-56 right-10 top-0 drop-shadow-md slide-from-top"
+                  class="md:absolute self-start w-56 right-10 top-0 drop-shadow-md slide-from-top"
                   src="./assets/section2/veme-app-ui-design.png"
                   alt=""
                 />
                 <img
-                  class="absolute w-56 left-40 bottom-0 drop-shadow-md slide-from-bottom"
+                  class="md:absolute w-56 left-40 bottom-0 drop-shadow-md slide-from-bottom"
                   src="./assets/section2/veme-blockchain-app-developed.png"
                   alt=""
                 />
@@ -336,12 +336,12 @@
 
         <!-- Section 3-->
         <section class="content-section swiper-slide">
-          <div class="flex h-screen w-screen">
+          <div class="flex flex-col-reverse md:flex-row h-screen w-screen">
             <div
-              class="flex flex-col justify-end bg-indigo-950 py-10 pl-14 gap-10 w-[45%] relative"
+              class="flex flex-col justify-end bg-indigo-950 py-10 pl-14 gap-10 md:w-[45%] relative"
             >
               <div
-                class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2"
+                class="hidden md:block absolute right-0 top-[200px] fade-in md:space-y-2 z-20"
               >
                 <p class="text-xl text-white font-bold">Powered by advance</p>
                 <img src="./assets/section3/nasa-mobile-app.png" class="w-64" />
@@ -354,19 +354,19 @@
                 <p class="text-white">web developement company</p>
                 <p class="text-white">in the world</p>
               </div>
-              <div class="slide-from-bottom">
+              <div class="slide-from-bottom md:pb-0 pb-10">
                 <p class="cursor-pointer text-white text-1xl">Coming soon</p>
               </div>
             </div>
-            <div class="relative bg-blue-950 w-[55%] images-container">
-              <div class="h-screen">
+            <div class="md:relative bg-blue-950 md:w-[55%] h-full">
+              <div class="flex justify-center items-center h-full">
                 <img
-                  class="absolute w-64 left-40 top-40 drop-shadow-md slide-from-bottom"
+                  class="md:absolute w-48 md:w-64 left-40 top-40 drop-shadow-md slide-from-bottom"
                   src="./assets/section3/nasa-fitness-tracking-mobile-app.png"
                   alt=""
                 />
                 <img
-                  class="absolute w-56 right-10 top-[-100px] drop-shadow-md slide-from-top"
+                  class="md:absolute w-48 md:w-56 right-10 top-[-100px] drop-shadow-md slide-from-top"
                   src="./assets/section3/measure-total-body-weight-through-fitness-app.png"
                   alt=""
                 />
@@ -376,12 +376,12 @@
         </section>
         <!-- Section 4-->
         <section class="content-section swiper-slide">
-          <div class="flex h-screen w-screen">
+          <div class="flex flex-col-reverse md:flex-row h-screen w-screen">
             <div
-              class="flex flex-col justify-end bg-sky-950 py-10 pl-14 gap-10 w-[45%] relative"
+              class="flex flex-col justify-end bg-sky-950 py-10 pl-14 gap-10 md:w-[45%] relative"
             >
               <div
-                class="absolute right-0 top-[200px] z-20 fade-in md:space-y-2"
+                class="hidden md:block absolute right-0 top-[200px] fade-in md:space-y-2 z-20"
               >
                 <p class="text-xl text-white font-bold">Redefining</p>
                 <h1 class="text-5xl text-white font-bold">UX Strategy</h1>
@@ -395,14 +395,14 @@
                 <p class="text-white">web developement company</p>
                 <p class="text-white">in the world</p>
               </div>
-              <div class="slide-from-bottom">
+              <div class="slide-from-bottom md:pb-0 pb-10">
                 <p class="cursor-pointer text-white text-1xl">
                   view case study
                 </p>
               </div>
             </div>
-            <div class="bg-slate-950 w-[55%]">
-              <div class="relative h-screen">
+            <div class="relative bg-slate-950 md:w-[55%] h-full">
+              <div class="h-full">
                 <img
                   class="absolute w-56 left-0 top-0 slide-from-top drop-shadow-lg"
                   src="./assets/section4/pizza_box.png"
@@ -414,18 +414,18 @@
                   alt=""
                 />
                 <img
-                  class="absolute w-56 left-20 bottom-0 slide-from-bottom drop-shadow-lg"
+                  class="absolute w-48 md:w-56 left-0 md:left-20 bottom-0 slide-from-bottom drop-shadow-lg"
                   src="./assets/section4/domi-img1.png"
                   alt=""
                 />
 
                 <img
-                  class="absolute w-56 right-48 top-20 fade-in drop-shadow-lg"
+                  class="absolute w-48 md:w-56 right-0 md:right-48 top-20 fade-in drop-shadow-lg"
                   src="./assets/section4/ux-strategy-for-mobile-app-devlopment.png"
                   alt=""
                 />
                 <img
-                  class="absolute w-56 right-0 bottom-0 slide-from-bottom drop-shadow-lg"
+                  class="hidden md:block absolute w-56 right-0 bottom-0 slide-from-bottom drop-shadow-lg"
                   src="./assets/section4/dominos-masala.png"
                   alt=""
                 />
@@ -435,12 +435,12 @@
         </section>
         <!-- Section 5-->
         <section class="content-section swiper-slide">
-          <div class="flex h-screen w-screen">
+          <div class="flex flex-col-reverse md:flex-row h-screen w-screen">
             <div
-              class="flex flex-col justify-end bg-sky-700 py-10 pl-14 gap-10 w-[45%] relative"
+              class="flex flex-col justify-end bg-sky-700 py-10 pl-14 gap-10 md:w-[45%] relative"
             >
               <div
-                class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2"
+                class="hidden md:block absolute right-0 top-[200px] fade-in md:space-y-2 z-20"
               >
                 <p class="text-xl text-white font-bold">Text Headline</p>
                 <h1 class="text-5xl text-white font-bold">Text Headline</h1>
@@ -454,36 +454,36 @@
                 <p class="text-white">web developement company</p>
                 <p class="text-white">in the world</p>
               </div>
-              <div class="slide-from-bottom">
+              <div class="slide-from-bottom md:pb-0 pb-10">
                 <p class="cursor-pointer text-white text-1xl">
                   view case study
                 </p>
               </div>
             </div>
-            <div class="bg-sky-400 w-[55%]">
-              <div class="relative h-screen">
+            <div class="relative bg-sky-400 md:w-[55%] h-full">
+              <div class="flex items-end h-full">
                 <img
-                  class="absolute w-48 left-20 top-[-20px] slide-from-top drop-shadow-lg"
+                  class="hidden md:block absolute w-48 left-20 top-[-20px] slide-from-top drop-shadow-lg"
                   src="./assets/section5/karavan-social-networking-app-screen.png"
                   alt=""
                 />
                 <img
-                  class="absolute w-48 right-[250px] top-[-10px] slide-from-top drop-shadow-lg"
+                  class="absolute w-48 right-0 top-10 md:right-[250px] md:top-[-10px] slide-from-top drop-shadow-lg"
                   src="./assets/section5/social-networking-app-case-study.png"
                   alt=""
                 />
                 <img
-                  class="absolute w-48 right-0 top-20 slide-from-right drop-shadow-lg"
+                  class="hidden md:block absolute w-48 right-0 top-20 slide-from-right drop-shadow-lg"
                   src="./assets/section5/karavan-social-networking-app-screen-2.png"
                   alt=""
                 />
                 <img
-                  class="absolute w-48 left-20 bottom-[-100px] slide-from-bottom drop-shadow-lg"
+                  class="absolute w-48 left-0 md:left-20 bottom-0 md:bottom-[-100px] slide-from-bottom drop-shadow-lg"
                   src="./assets/section5/karavan_2.png"
                   alt=""
                 />
                 <img
-                  class="absolute w-48 right-[250px] bottom-[-120px] slide-from-bottom drop-shadow-lg"
+                  class="hidden md:block absolute w-48 right-[250px] bottom-[-120px] slide-from-bottom drop-shadow-lg"
                   src="./assets/section5/karavan-social-networking-app-screen.png"
                   alt=""
                 />
@@ -494,12 +494,12 @@
 
         <!--section 6-->
         <section class="content-section swiper-slide">
-          <div class="flex h-screen w-screen">
+          <div class="flex flex-col-reverse md:flex-row h-screen w-screen">
             <div
-              class="flex flex-col justify-end bg-blue-900 py-10 pl-14 gap-10 w-[45%] relative"
+              class="flex flex-col justify-end bg-blue-900 py-10 pl-14 gap-10 md:w-[45%] relative"
             >
               <div
-                class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2"
+                class="hidden md:block absolute right-0 top-[200px] fade-in md:space-y-2 z-20"
               >
                 <p class="text-xl text-white font-bold">
                   Developing ERP Solution for
@@ -515,20 +515,20 @@
                 <p class="text-white">web developement company</p>
                 <p class="text-white">in the world</p>
               </div>
-              <div class="slide-from-bottom">
+              <div class="slide-from-bottom md:pb-0 pb-10">
                 <p class="cursor-pointer text-white text-1xl">
                   view case study
                 </p>
               </div>
             </div>
             <div
-              class="bg-emerald-500 w-[55%]"
+              class="bg-emerald-500 md:w-[55%]"
               style="
                 background-image: url('./assets/section6/interior.jpg');
                 height: 100vh;
               "
             >
-              <div class="flex h-screen">
+              <div class="flex md:h-screen">
                 <img
                   class="justify-center items-center w-screen slide-from-bottom drop-shadow-lg z-1"
                   src="./assets/section6/erp-app-development-service.png"
@@ -541,12 +541,12 @@
 
         <!--section 7-->
         <section class="content-section swiper-slide">
-          <div class="flex h-screen w-screen">
+          <div class="flex flex-col-reverse md:flex-row h-screen w-screen">
             <div
-              class="flex flex-col justify-end bg-emerald-700 py-10 pl-14 gap-10 w-[45%] relative"
+              class="flex flex-col justify-end bg-emerald-700 py-10 pl-14 gap-10 md:w-[45%] relative"
             >
               <div
-                class="absolute right-0 top-[180px] z-20 fade-in md:space-y-2"
+                class="hidden md:block absolute right-0 top-[200px] fade-in md:space-y-2 z-20"
               >
                 <p class="text-xl text-white font-bold">Biggest Classfields</p>
                 <h1 class="text-5xl text-white font-bold">East Asia</h1>
@@ -563,21 +563,23 @@
                 <p class="text-white">web developement company</p>
                 <p class="text-white">in the world</p>
               </div>
-              <div class="slide-from-bottom">
+              <div class="slide-from-bottom md:pb-0 pb-10">
                 <p class="cursor-pointer text-white text-1xl">
                   view case study
                 </p>
               </div>
             </div>
-            <div class="bg-emerald-500 w-[55%]">
-              <div class="relative h-screen">
+            <div class="bg-emerald-500 md:w-[55%] h-full">
+              <div
+                class="flex md:block justify-center items-center h-full md:relative"
+              >
                 <img
-                  class="absolute w-80 left-[200px] bottom-[-40px] slide-from-bottom drop-shadow-lg z-1"
+                  class="md:absolute w-36 md:w-80 left-[200px] bottom-[-40px] slide-from-bottom drop-shadow-lg z-1"
                   src="./assets/section7/melltoo-img2.png"
                   alt=""
                 />
                 <img
-                  class="absolute w-64 right-20 bottom-[-40px] slide-from-bottom drop-shadow-lg"
+                  class="md:absolute w-36 md:w-64 right-20 bottom-[-40px] slide-from-bottom drop-shadow-lg"
                   src="./assets/section7/melltoo-img1.png"
                   alt=""
                 />
@@ -587,11 +589,11 @@
         </section>
       </div>
 
-      <div class="md:hidden swiper-pagination"></div>
+      <div class="md:hidden swiper-pagination text-white"></div>
 
       <!-- If we need navigation buttons -->
-      <div class="md:hidden swiper-button-prev"></div>
-      <div class="md:hidden swiper-button-next"></div>
+      <div class="hidden swiper-button-prev"></div>
+      <div class="hidden swiper-button-next"></div>
 
       <!-- If we need scrollbar -->
       <div class="md:hidden swiper-scrollbar"></div>
