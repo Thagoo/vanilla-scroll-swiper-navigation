@@ -15,7 +15,7 @@ let currentSectionIndex = 0;
 // Function to activate and deactivate path slider points
 const bgColors = [
   "bg-purple-900",
-  "bg-indigo-700",
+  "bg-indigo-800",
   "bg-indigo-950",
   "bg-sky-950",
   "bg-sky-700",
