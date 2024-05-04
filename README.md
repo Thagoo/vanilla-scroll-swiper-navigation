@@ -2,6 +2,9 @@
 
 Beautifull Scroll Navigation site with Swiper Navigation on Mobile.
 
+## Screenshot
+![image](https://github.com/Thagoo/vanilla-scroll-swiper-navigation/assets/47388359/dd74f91d-2022-430c-a0ab-9414c09c8054)
+
 ## Live Demo
 
 https://thagoo.github.io/vanilla-scroll-swiper-navigation/
